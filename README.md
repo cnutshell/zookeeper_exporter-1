@@ -12,3 +12,15 @@ There is a `-help` flag for listing the available flags.
 
 ## Limitations
 Due to the type of data exposed by Zookeeper's `mntr` command, it currently resets Zookeeper's internal statistics every time it is scraped. This makes it unsuitable for having multiple parallel scrapers.
+
+# My Personal Comment
+
+- *refer to zokeeper.go line 141*
+
+  ```go
+  func (c *zookeeperCollector) Collect(ch chan<- prometheus.Metric) {
+      ……
+  }
+  ```
+
+  
